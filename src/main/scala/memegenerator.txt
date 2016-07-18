@@ -1,0 +1,15 @@
+Meme generator
+
+Necessary features
+1. User should be able to click a button called 'Make a meme', where the user is then taken to a list of meme characters to choose from.
+2. Once user chooses meme character, user should be able to click a button called 'generate meme' where the user is taken to another page where he can input text up the top of the image, and down bottom of the image.
+3. Once text inputted, user should be able to generate the meme, where it is uploaded to the site or an external site (e.g. imgur.com)
+4. There should be a button to click which will take user to a page where the 'create memes' are stored and shown to the public for viewing
+
+Optional features
+1. User may want to upload their own meme character to the website. Allow for user to click 'create own meme character', where user is taken to another page where user can choose to upload image from computer, or input a url to another image website (e.g. imgur.com)
+2. User may want the option of registering to the site, where user can be linked to the uploaded meme so the user can take credit for a meme. User also might want additional features such as saving favourite memes or joining meme groups
+3. Should be comment section underneath the uploaded meme
+4. Should be an upvote/downvote interaction for users
+5. Users should be able to share the image with external social media (e.g. facebook/twitter/reddit)
+6. Whilst inputting text into 'generate meme', the image should preview what the meme will look like
