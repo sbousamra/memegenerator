@@ -46,6 +46,13 @@ object Domain {
       url <- (p --\ "url").as[URL]
     } yield CreatedMeme(source, topText, bottomText, id, url))
 
+  implicit def NewMemeDtoDecodeJson: DecodeJson[NewMemeDto] =
+    DecodeJson(p => for {
+      source <- (p --\ "source").as[URL]
+      topText <- (p --\ "top_text").as[String]
+      bottomText <- (p --\ "bottom_text").as[String]
+    } yield NewMemeDto(source, topText, bottomText))
+
   implicit def URLDecodeJson: DecodeJson[URL] =
     DecodeJson(p => p.as[String].flatMap { x =>
       fromStringSafely[URL, String](x, z => new URL(z)) match {
@@ -69,11 +76,4 @@ object Domain {
       case e: Exception => None
     }
   }
-
-  implicit def NewMemeDtoDecodeJson: DecodeJson[NewMemeDto] =
-    DecodeJson(p => for {
-      source <- (p --\ "source").as[URL]
-      topText <- (p --\ "top_text").as[String]
-      bottomText <- (p --\ "bottom_text").as[String]
-    } yield NewMemeDto(source, topText, bottomText))
 }
